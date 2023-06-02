@@ -2,6 +2,7 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 import {styles} from '../theme/appTheme';
+import {BotonCalc} from '../components/BotonCalc';
 
 export const CalculadoraScreen = () => {
   return (
@@ -9,10 +10,38 @@ export const CalculadoraScreen = () => {
       <Text style={styles.resultadoPequeno}>1,500.00</Text>
       <Text style={styles.resultado}>1,500.00</Text>
 
-      <View>
-        <View style={styles.boton}>
-          <Text style={styles.botonTexto}>1</Text>
-        </View>
+      <View style={styles.fila}>
+        <BotonCalc text="C" color="#9B9B9B" />
+        <BotonCalc text="+/-" color="#9B9B9B" />
+        <BotonCalc text="del" color="#9B9B9B" />
+        <BotonCalc text="/" color="#FF9427" />
+      </View>
+
+      <View style={styles.fila}>
+        <BotonCalc text="7" />
+        <BotonCalc text="8" />
+        <BotonCalc text="9" />
+        <BotonCalc text="x" color="#FF9427" />
+      </View>
+
+      <View style={styles.fila}>
+        <BotonCalc text="4" />
+        <BotonCalc text="5" />
+        <BotonCalc text="6" />
+        <BotonCalc text="-" color="#FF9427" />
+      </View>
+
+      <View style={styles.fila}>
+        <BotonCalc text="1" />
+        <BotonCalc text="2" />
+        <BotonCalc text="3" />
+        <BotonCalc text="+" color="#FF9427" />
+      </View>
+
+      <View style={styles.fila}>
+        <BotonCalc text="0" ancho />
+        <BotonCalc text="." />
+        <BotonCalc text="=" color="#FF9427" />
       </View>
     </View>
   );
